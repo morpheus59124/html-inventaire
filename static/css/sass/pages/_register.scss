@@ -1,0 +1,68 @@
+#register {
+    width: 500px;
+    height: 650px;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    @include box-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    h1 {
+        font-size: 55px;
+        color: #293A49;
+        text-align: center;
+        position: relative;
+    }
+    h1::after {
+        content: "INSCRIPTION";
+        position: absolute;
+        bottom: -5px;
+        left: 55%;
+        font-size: 15px;
+
+    }
+    form {
+        margin: 0 auto;
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        div {
+            margin: 10px 0;
+            input {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                font-size: 25px;
+                border: 1px solid black;
+                @include box-shadow;
+            }
+        }
+        .button {
+            width: max-content;
+            button {
+                width: 250px;
+                height: 75px;
+                justify-self: center;
+                border-radius: 15px;
+                border: 2px solid #71B2AB;
+                background-color: #93E3DA;
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                @include box-shadow;
+                transition: 0.5s;
+            }
+            button:hover {
+                background-color: #71B2AB;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de connexion à MyPanel">
+    <meta name="author" content="Thomas DLMP">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sass/main.css') }}">
+    <title>MyPanel - {{ title if title}}</title>
+</head>
+<body>
+    <main class="index">
+        <nav>
+            <h1>MyPanel</h1>
+            <ul>
+                <li>
+                    <a href="/">🏠 Accueil</a>
+                </li>
+                <li>
+                    <a href="admin/users">🧸 Utilisateurs</a>
+                </li>
+                <li>
+                    <a href="admin/computers">💻 Ordinateurs</a>
+                </li>
+                <li>
+                    <a href="admin/tickets">📝 Tickets</a>
+                </li>
+            </ul>
+            <a class="btn-logout" href="/logout">DECONNEXION</a>
+        </nav>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum optio voluptates veniam fuga cum qui?
+</body>
+</html>

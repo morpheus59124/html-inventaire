@@ -1,0 +1,16 @@
+.alert {
+    z-index: 1000;
+    width: 400px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    border-radius: 5px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

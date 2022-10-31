@@ -1,0 +1,35 @@
+{% extends('base.html') %}
+
+{% block content %}
+
+{% if error %}
+    <span class="alert"><p>{{ error }}</p></span>
+{% endif %}
+
+<main id="register">
+    <h1>MyPanel</h1>
+    <form action="/register" method="post">
+        <div>
+            <label for="firstname">prenom :</label>
+            <input type="text" id="firstname" name="user_firstname">
+        </div>
+        <div>
+            <label for="surname">nom :</label>
+            <input type="text" id="surname" name="user_surname">
+        </div>
+        <div>
+            <label for="mail">adresse mail :</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="password">mot de passe :</label>
+            <input type="password" id="password" name="user_password">
+        </div>
+        <div class="button">
+            <button type="submit">S'INSCRIRE</button>
+        </div>
+    </form>
+    <a class="btn-login" href="/login">DEJA INSCRITS ?</a>
+</main>
+
+{% endblock %}

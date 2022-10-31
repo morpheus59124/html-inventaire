@@ -1,0 +1,75 @@
+.index {
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    @include box-shadow;
+    .container {
+        width: 750px;
+        max-height: 700px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        .admin-stats {
+            display: grid;
+            width: 100%;
+            height: max-content;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: 1fr, 1fr;
+            grid-template-areas:
+            "title title title title"
+            "stats1 stats2 stats3 stats4";
+            a {
+                text-decoration: none;
+                p{
+                    text-align: center;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+            h2:nth-child(1) {
+                grid-area: title;
+                margin-top: 30px;
+                padding: 15px;
+                justify-self: start;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            a:nth-child(2) {
+                grid-area: stats1;
+                @include stats-case;
+                background-color: #448796;
+                border: 2px solid #3b7581;
+            }
+            a:nth-child(3) {
+                grid-area: stats2;
+                @include stats-case;
+                background-color: #4AAD6B;
+                border: 2px solid #398552;
+            }
+            a:nth-child(4) {
+                grid-area: stats3;
+                @include stats-case;
+                background-color: #B07452;
+                border: 2px solid #7d533a;
+            }
+            a:nth-child(5) {
+                grid-area: stats4;
+                @include stats-case;
+                background-color: #5E2E83;
+                border: 2px solid #3e1f56;
+            }
+            a:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
